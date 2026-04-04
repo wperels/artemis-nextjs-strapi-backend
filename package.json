@@ -1,5 +1,5 @@
 {
-  "name": "surfcamp-nextjs-strapi-backend",
+  "name": "artemis-nextjs-strapi-backend",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -31,9 +31,15 @@
   "overrides": {
     "lodash": "4.17.23",
     "esbuild": "0.27.3",
-    "tar": "7.5.7",
+    "tar": "^7.5.11",
     "tmp": "0.2.5",
-    "jwk-to-pem": "2.0.7"
+    "jwk-to-pem": "2.0.7",
+    "semver": "^7.6.0",
+    "tough-cookie": "^4.1.4",
+    "word-wrap": "^1.2.4",
+    "undici": "^7.22.0",
+    "ajv": "^8.17.2",
+    "zod": "^4.0.0"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",

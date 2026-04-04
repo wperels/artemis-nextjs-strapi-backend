@@ -1,4 +1,4 @@
-# Surfcamp App
+# Artemis App
 
 A full-stack web application built with **Next.js** (frontend) and **Strapi** (backend/CMS).
 
@@ -10,15 +10,15 @@ This project is split into two separate repositories and VS Code workspaces:
 
 | Part     | Local Folder                                                     |
 |----------|------------------------------------------------------------------|
-| Frontend | "C:\Users\wpere\Local Sites\surfcamp-nextjs-strapi"       
-| Backend  | "C:\Users\wpere\Local Sites\surfcamp-nextjs-strapi-backend" 
+| Frontend | "C:\Users\wpere\Local Sites\artemis-nextjs-strapi"       
+| Backend  | "C:\Users\wpere\Local Sites\artemis-nextjs-strapi-backend" 
 
 ---
 
 ## 🔗 GitHub Repositories
 
-- **Frontend:** https://github.com/wperels/surfcamp-nextjs-strapi
-- **Backend:** https://github.com/wperels/surfcamp-nextjs-strapi-backend
+- **Frontend:** https://github.com/wperels/artemis-nextjs-strapi
+- **Backend:** https://github.com/wperels/artemis-nextjs-strapi-backend
 
 ---
 
@@ -31,7 +31,7 @@ This project is split into two separate repositories and VS Code workspaces:
    ```bash
    npm run develop
    ```
-3. Strapi admin panel opens at: `http://localhost:1337/admin`(use account: marksheperd0@gmail.com)
+3. Strapi admin panel opens at: `http://localhost:1337/admin`(use account: ***REMOVED***)
 
 ### Frontend (Next.js)
 
@@ -40,7 +40,7 @@ This project is split into two separate repositories and VS Code workspaces:
    ```bash
    npm run dev
    ```
-3. App opens at: `http://localhost:3002`
+3. App opens at: `http://localhost:3003`
 
 > **Note:** Always start the **backend first**, then the frontend.
 
@@ -50,10 +50,10 @@ This project is split into two separate repositories and VS Code workspaces:
 
 | Resource           | URL / Info                     |
 |--------------------|--------------------------------|
-| Local App URL      | `http://localhost:3002`        |
+| Local App URL      | `http://localhost:3003`        |
 | Local Strapi Admin | `http://localhost:1337/admin`  |
-| Strapi Login Email |  marksheperd0@gmail.com        |
-| Strapi Password    |  Ml2IFeS!!                     |
+| Strapi Login Email |  ***REMOVED***        |
+| Strapi Password    |  ***REMOVED***                     |
 
 ---
 
@@ -63,8 +63,8 @@ This project is split into two separate repositories and VS Code workspaces:
 |-----------------------|------------------------------------------------------------------|
 | Deployed App URL      | https://wp-nextjs-strapi.vercel.app/                             |
 | Deployed Strapi Admin | https://wp-nextjs-strapi-backend.onrender.com/admin              |
-| Strapi Login Email    | wperelstein@gmail.com                                            |
-| Strapi Password       | q*45N$P;dX9H")5W\C_+                                             |
+| Strapi Login Email    | ***REMOVED***                                            |
+| Strapi Password       | q***REMOVED***                                             |
 
 ---
 
@@ -72,20 +72,20 @@ This project is split into two separate repositories and VS Code workspaces:
 
 ### Vercel (Frontend Hosting)
 - **Dashboard:** https://vercel.com
-- **Account Email:** use GitHub log-in
+- **Account Email:** ***REMOVED***
 - **Project Name:** wp-nextjs-strapi
 
 ### Render (Backend Hosting + Database)
 - **Dashboard:** https://dashboard.render.com/
-- **Account Email:** use GitHub log-in
+- **Account Email:** ***REMOVED***
 - **Backend Service Name:** wp-nextjs-strapi-backend
 - **PostgreSQL Database Name:** wp-strapi-db
 - **Plan:** PostgreSQL Starter tier ($7/month)
 
 ### Cloudinary (Media Storage)
 - **Dashboard:** https://cloudinary.com
-- **Account Email:** wperelstein@gmail.com
-- **Cloud Name:** dwrqcfteb
+- **Account Email:** ***REMOVED***
+- **Cloud Name:** ***REMOVED***
 
 ---
 
@@ -98,10 +98,10 @@ NEXT_PUBLIC_STRAPI_URL= https://wp-nextjs-strapi-backend.onrender.com/admin
 
 ### Backend (`.env`)
 ```env
-DATABASE_URL= postgresql://wp_strapi_db_user:MxFmCFopPF9LKucZkYDktAQ3lLopPVoo@dpg-d63pv2p4tr6s73a23a40-a/wp_strapi_db
-CLOUDINARY_NAME= dwrqcfteb
-CLOUDINARY_KEY= 987266461673268
-CLOUDINARY_SECRET= k-muhB4NdLYlwC4ll8GyZd32SYM
+DATABASE_URL= ***REMOVED***
+CLOUDINARY_NAME= ***REMOVED***
+CLOUDINARY_KEY= ***REMOVED***
+CLOUDINARY_SECRET= ***REMOVED***
 FRONTEND_URL= https://wp-nextjs-strapi.vercel.app/
 ```
 
@@ -112,4 +112,5 @@ FRONTEND_URL= https://wp-nextjs-strapi.vercel.app/
 - The frontend and backend are maintained in **separate GitHub repositories** and opened in **separate VS Code instances**.
 - Local and deployed Strapi instances use **different admin accounts** — see the sections above for each.
 - Media assets (images, uploads) are stored and served through **Cloudinary**.
-- The backend database on Render is a **paid tier** to prevent data loss (free tier databases are deleted after inactivity).
+- NOT(The backend database on Render is a **paid tier** to prevent data loss (free tier databases are deleted after inactivity).)
+- The backend database is hosted on Neon (serverless PostgreSQL free tier) — data is preserved without inactivity deletion, replacing the previous Render PostgreSQL paid tier ($7/month).

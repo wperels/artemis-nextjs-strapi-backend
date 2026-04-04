@@ -85,6 +85,7 @@ public/uploads/*
 .tsbuildinfo
 .eslintcache
 .cache/
+README_APP_INFO.md
 
 ############################
 # Node.js

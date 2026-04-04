@@ -30,7 +30,7 @@ module.exports = [
     config: {
       enabled: true,
       origin: [
-        'http://localhost:3002',
+        'http://localhost:3003',
         'https://*.vercel.app', // Allow all Vercel preview deployments
         'https://wp-nextjs-strapi-backend.onrender.com', // Add your production domain
       ],
