@@ -28,7 +28,6 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       origin: [
         'http://localhost:3003',
         'https://*.vercel.app', // Allow all Vercel preview deployments
