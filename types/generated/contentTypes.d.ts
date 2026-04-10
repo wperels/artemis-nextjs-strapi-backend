@@ -638,6 +638,43 @@ export interface ApiInfoblocksLanding2InfoblocksLanding2
   };
 }
 
+export interface ApiNasaImageNasaImage extends Struct.CollectionTypeSchema {
+  collectionName: 'nasa_images';
+  info: {
+    displayName: 'nasa-image';
+    pluralName: 'nasa-images';
+    singularName: 'nasa-image';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    copyright: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    explanation: Schema.Attribute.Text;
+    featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    hdUrl: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::nasa-image.nasa-image'
+    > &
+      Schema.Attribute.Private;
+    mediaType: Schema.Attribute.String;
+    nasaDate: Schema.Attribute.Date &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNewsletterSignupNewsletterSignup
   extends Struct.CollectionTypeSchema {
   collectionName: 'newsletter_signups';
@@ -1219,6 +1256,7 @@ declare module '@strapi/strapi' {
       'api::infoblocks-experience.infoblocks-experience': ApiInfoblocksExperienceInfoblocksExperience;
       'api::infoblocks-experience2.infoblocks-experience2': ApiInfoblocksExperience2InfoblocksExperience2;
       'api::infoblocks-landing2.infoblocks-landing2': ApiInfoblocksLanding2InfoblocksLanding2;
+      'api::nasa-image.nasa-image': ApiNasaImageNasaImage;
       'api::newsletter-signup.newsletter-signup': ApiNewsletterSignupNewsletterSignup;
       'api::participant.participant': ApiParticipantParticipant;
       'plugin::content-releases.release': PluginContentReleasesRelease;

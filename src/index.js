@@ -1,20 +1,13 @@
+// src/index.js
 'use strict';
 
 module.exports = {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
   register(/*{ strapi }*/) {},
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/*{ strapi }*/) {},
+  async bootstrap({ strapi }) {
+    // TEMPORARY TEST — remove after confirming cron task works
+    strapi.log.info('🧪 Manually triggering NASA fetch test...');
+    const cronTasks = require('../config/cron-tasks');
+    await cronTasks.fetchNasaAPOD.task({ strapi });
+  },
 };
