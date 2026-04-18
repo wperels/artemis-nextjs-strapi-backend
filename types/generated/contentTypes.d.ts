@@ -621,6 +621,8 @@ export interface ApiInfoblocksLanding2InfoblocksLanding2
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    heroHeadline: Schema.Attribute.String;
+    heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     info_blocks: Schema.Attribute.Relation<
       'oneToMany',
       'api::info-block.info-block'
