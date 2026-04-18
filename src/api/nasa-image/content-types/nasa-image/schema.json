@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nasa_images",
+  "info": {
+    "singularName": "nasa-image",
+    "pluralName": "nasa-images",
+    "displayName": "nasa-image"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "explanation": {
+      "type": "text"
+    },
+    "imageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "hdUrl": {
+      "type": "string"
+    },
+    "nasaDate": {
+      "type": "date",
+      "required": true,
+      "unique": true
+    },
+    "mediaType": {
+      "type": "string"
+    },
+    "copyright": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
