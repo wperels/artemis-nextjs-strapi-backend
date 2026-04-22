@@ -9,7 +9,12 @@ module.exports = ({ env }) => ({
       },
       actionOptions: {
         upload: {},
+        uploadStream: {},
         delete: {},
+      },
+      security: {
+        allowedFileTypes: ['image/*'],
+        maxSize: 10 * 1024 * 1024, // 10MB
       },
     },
   },

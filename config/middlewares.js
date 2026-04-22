@@ -30,14 +30,24 @@ module.exports = [
     config: {
       origin: [
         'http://localhost:3003',
-        'https://*.vercel.app', // Allow all Vercel preview deployments
-        'https://wp-nextjs-strapi-backend.onrender.com', // Add your production domain
+        'https://*.vercel.app',
+        'https://wp-nextjs-strapi-backend.onrender.com',
       ],
     },
   },
   'strapi::poweredBy',
   'strapi::query',
-  'strapi::body',
+  {
+    name: 'strapi::body',
+    config: {
+      formLimit: '10mb',
+      jsonLimit: '10mb',
+      textLimit: '10mb',
+      formidable: {
+        maxFileSize: 10 * 1024 * 1024,
+      },
+    },
+  },
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
