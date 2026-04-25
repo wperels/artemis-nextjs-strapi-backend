@@ -589,6 +589,11 @@ export interface ApiInfoblocksExperience2InfoblocksExperience2
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    heroHeadline: Schema.Attribute.String & Schema.Attribute.Required;
+    heroImage: Schema.Attribute.Media<
+      'images' | 'videos' | 'audios' | 'files',
+      true
+    >;
     info_blocks: Schema.Attribute.Relation<
       'oneToMany',
       'api::info-block.info-block'
