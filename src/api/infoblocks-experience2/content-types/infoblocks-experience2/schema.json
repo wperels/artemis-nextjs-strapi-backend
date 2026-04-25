@@ -15,6 +15,21 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::info-block.info-block"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ]
+    },
+    "heroHeadline": {
+      "type": "string",
+      "required": true
     }
   }
 }
