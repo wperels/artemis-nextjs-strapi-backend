@@ -636,6 +636,9 @@ export interface ApiInfoblocksLanding2InfoblocksLanding2
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    hero_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     heroHeadline: Schema.Attribute.String;
     heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     info_blocks: Schema.Attribute.Relation<

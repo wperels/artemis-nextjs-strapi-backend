@@ -26,6 +26,16 @@
         "audios"
       ]
     },
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "heroHeadline": {
       "type": "string"
     }
