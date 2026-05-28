@@ -26,7 +26,7 @@
         "audios"
       ]
     },
-    "hero_image": {
+    "not_hero_image_donot_use2": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

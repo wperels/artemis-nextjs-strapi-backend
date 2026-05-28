@@ -636,9 +636,6 @@ export interface ApiInfoblocksLanding2InfoblocksLanding2
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    hero_image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
     heroHeadline: Schema.Attribute.String;
     heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     info_blocks: Schema.Attribute.Relation<
@@ -651,6 +648,9 @@ export interface ApiInfoblocksLanding2InfoblocksLanding2
       'api::infoblocks-landing2.infoblocks-landing2'
     > &
       Schema.Attribute.Private;
+    not_hero_image_donot_use2: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
