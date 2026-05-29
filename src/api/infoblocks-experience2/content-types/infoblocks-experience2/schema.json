@@ -30,6 +30,13 @@
     "heroHeadline": {
       "type": "string",
       "required": true
+    },
+    "heroImage2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

@@ -604,6 +604,7 @@ export interface ApiInfoblocksExperience2InfoblocksExperience2
       'images' | 'videos' | 'audios' | 'files',
       true
     >;
+    heroImage2: Schema.Attribute.Media<'images'>;
     info_blocks: Schema.Attribute.Relation<
       'oneToMany',
       'api::info-block.info-block'
@@ -638,6 +639,7 @@ export interface ApiInfoblocksLanding2InfoblocksLanding2
       Schema.Attribute.Private;
     heroHeadline: Schema.Attribute.String;
     heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heroImage2: Schema.Attribute.Media<'images'>;
     info_blocks: Schema.Attribute.Relation<
       'oneToMany',
       'api::info-block.info-block'

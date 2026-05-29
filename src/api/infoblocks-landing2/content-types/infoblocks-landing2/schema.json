@@ -38,6 +38,13 @@
     },
     "heroHeadline": {
       "type": "string"
+    },
+    "heroImage2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
