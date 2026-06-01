@@ -30,8 +30,8 @@ module.exports = [
     config: {
       origin: [
         'http://localhost:3003',
-        'https://*.vercel.app',
-        'https://wp-nextjs-strapi-backend.onrender.com',
+        'https://artemis-nextjs-strapi.vercel.app',
+        'https://artemis-nextjs-strapi-backend.onrender.com',
       ],
     },
   },
