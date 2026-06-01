@@ -3,8 +3,8 @@ module.exports = ({ env }) => ({
     secret: env('ADMIN_JWT_SECRET'),
     sessions: {
       // lifespans expressed as integers (days). Adjust via env if needed.
-      maxRefreshTokenLifespan: env.int('ADMIN_MAX_REFRESH_TOKEN_LIFESPAN', 30),
-      maxSessionLifespan: env.int('ADMIN_MAX_SESSION_LIFESPAN', 60),
+      maxRefreshTokenLifespan: env.int('ADMIN_MAX_REFRESH_TOKEN_LIFESPAN', 2592000),
+      maxSessionLifespan: env.int('ADMIN_MAX_SESSION_LIFESPAN', 3600),
     },
   },
   secrets: {
