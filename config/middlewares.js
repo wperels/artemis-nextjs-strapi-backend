@@ -31,7 +31,7 @@ module.exports = [
       origin: [
         'http://localhost:3003',
         'https://artemis-nextjs-strapi.vercel.app',
-        'https://artemis-nextjs-strapi-backend.onrender.com',
+        //'https://artemis-nextjs-strapi-backend.onrender.com',
       ],
     },
   },
