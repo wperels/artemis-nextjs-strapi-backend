@@ -14,7 +14,7 @@
       ]
     },
     "imageCaption": {
-      "type": "string"
+      "type": "text"
     }
   },
   "config": {}
