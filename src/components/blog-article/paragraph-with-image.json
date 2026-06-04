@@ -28,7 +28,7 @@
       "default": true
     },
     "imageCaption": {
-      "type": "string"
+      "type": "text"
     }
   },
   "config": {}

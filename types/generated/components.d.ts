@@ -39,7 +39,7 @@ export interface BlogArticleParagraphWithImage extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    imageCaption: Schema.Attribute.String;
+    imageCaption: Schema.Attribute.Text;
     imageShowsRight: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<true>;
