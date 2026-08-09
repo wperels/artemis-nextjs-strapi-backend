@@ -18,7 +18,7 @@ export interface BlogArticleLandscapeImage extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
-    imageCaption: Schema.Attribute.String;
+    imageCaption: Schema.Attribute.Text;
   };
 }
 
