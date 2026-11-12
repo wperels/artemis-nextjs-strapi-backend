@@ -660,6 +660,40 @@ export interface ApiInfoblocksLanding2InfoblocksLanding2
   };
 }
 
+export interface ApiInfoblocksScavengerHuntLandingInfoblocksScavengerHuntLanding
+  extends Struct.SingleTypeSchema {
+  collectionName: 'infoblocks_scavenger_hunt_landings';
+  info: {
+    displayName: 'Infoblocks ScavengerHuntLanding';
+    pluralName: 'infoblocks-scavenger-hunt-landings';
+    singularName: 'infoblocks-scavenger-hunt-landing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroHeadline: Schema.Attribute.String;
+    heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    info_blocks: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::info-block.info-block'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::infoblocks-scavenger-hunt-landing.infoblocks-scavenger-hunt-landing'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNasaImageNasaImage extends Struct.CollectionTypeSchema {
   collectionName: 'nasa_images';
   info: {
@@ -1278,6 +1312,7 @@ declare module '@strapi/strapi' {
       'api::infoblocks-experience.infoblocks-experience': ApiInfoblocksExperienceInfoblocksExperience;
       'api::infoblocks-experience2.infoblocks-experience2': ApiInfoblocksExperience2InfoblocksExperience2;
       'api::infoblocks-landing2.infoblocks-landing2': ApiInfoblocksLanding2InfoblocksLanding2;
+      'api::infoblocks-scavenger-hunt-landing.infoblocks-scavenger-hunt-landing': ApiInfoblocksScavengerHuntLandingInfoblocksScavengerHuntLanding;
       'api::nasa-image.nasa-image': ApiNasaImageNasaImage;
       'api::newsletter-signup.newsletter-signup': ApiNewsletterSignupNewsletterSignup;
       'api::participant.participant': ApiParticipantParticipant;

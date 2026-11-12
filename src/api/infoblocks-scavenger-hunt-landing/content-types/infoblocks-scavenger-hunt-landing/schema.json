@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "infoblocks_scavenger_hunt_landings",
+  "info": {
+    "singularName": "infoblocks-scavenger-hunt-landing",
+    "pluralName": "infoblocks-scavenger-hunt-landings",
+    "displayName": "Infoblocks ScavengerHuntLanding"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "info_blocks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::info-block.info-block"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heroHeadline": {
+      "type": "string"
+    }
+  }
+}
